@@ -6,4 +6,4 @@ import firebaseConfig from '/Users/harrisonedwards/code/andHoney/firebaseconfig.
 
 firebase.initializeApp(firebaseConfig);
 
-ReactDom.render(<App />, document.getElementById('app')); 
+ReactDom.render(<App />, document.getElementById('app'));  

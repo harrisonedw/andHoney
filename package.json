@@ -31,7 +31,8 @@
     "react-modal": "^3.11.2",
     "react-tooltip": "^4.1.2",
     "request": "^2.88.2",
-    "spotify-web-api-node": "^4.0.0"
+    "style-loader": "^1.2.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
