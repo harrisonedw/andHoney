@@ -4,7 +4,8 @@
   "description": "web app for online vintage clothing and accessories shop",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "react-dev": "webpack -d --watch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "body-parser": "^1.19.0",
     "disconnect": "^1.2.1",
     "express": "^4.17.1",
+    "firebase": "^7.15.1",
     "method-override": "^3.0.0",
     "nodemon": "^2.0.2",
     "react": "^16.13.0",
