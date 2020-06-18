@@ -4,7 +4,12 @@ import styled from 'styled-components';
 
 const CategoryStyle = styled.div`
   max-width: 375px;
-  margin: 2.5px
+  margin: 2.5px;
+  
+  :hover {
+		opacity: .33;
+		cursor: pointer;
+	}
 `
 
 const Category = (props) => {
