@@ -1,9 +1,8 @@
 import React from 'react';
-import TopBar from './TopBar.jsx';
 import styled from 'styled-components';
-import Categories from './Categories.jsx';
-import NewArrivals from './NewArrivals.jsx';
-// import styles from './App.css';
+import TopBar from './mainComponents/TopBar.jsx';
+import Categories from './mainComponents/Categories.jsx';
+import NewArrivals from './mainComponents/NewArrivals.jsx';
 
 const AppContainer = styled.div`
   background-color: #f0f0f0;
@@ -45,29 +44,24 @@ const NewArrivalContainer = styled.div`
   text: black;
 `
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+const App = () => {
 
-    }
-  }
 
-  render() {
-    return (
-      <AppContainer>
-        <TopBarContainer>
-          <TopBar></TopBar>
-        </TopBarContainer>
-        <CategoryContainer>
-          <Categories></Categories>
-        </CategoryContainer>
-        <NewArrivalContainer>
-          <NewArrivals></NewArrivals>
-        </ NewArrivalContainer>
-      </AppContainer>
-    )
-  }
+
+
+  return (
+    <AppContainer>
+      <TopBarContainer>
+        <TopBar></TopBar>
+      </TopBarContainer>
+      <CategoryContainer>
+        <Categories></Categories>
+      </CategoryContainer>
+      <NewArrivalContainer>
+        <NewArrivals></NewArrivals>
+      </ NewArrivalContainer>
+    </AppContainer>
+  )
 }
 
 
