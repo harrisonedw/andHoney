@@ -1,8 +1,13 @@
 import React from 'react';
+import * as firebase from 'firebase';
+import firebaseConfig from '../../../firebaseconfig.js'
+
 import styled from 'styled-components';
 import TopBar from './mainComponents/TopBar.jsx';
 import Categories from './mainComponents/Categories.jsx';
 import NewArrivals from './mainComponents/NewArrivals.jsx';
+
+
 
 const AppContainer = styled.div`
   background-color: #f0f0f0;
@@ -25,7 +30,7 @@ const TopBarContainer = styled.div`
 `
 
 const CategoryContainer = styled.div`
-  background-color: white;
+  background-color: #f0f0f0;
   text-align: center;
   text: black;
   display: flex;
@@ -46,6 +51,9 @@ const NewArrivalContainer = styled.div`
 
 const App = () => {
 
+  // firebase.initializeApp(firebaseConfig);
+
+  // let categoriesDb = firebase.database().ref('/categories').once('value');
 
 
 
