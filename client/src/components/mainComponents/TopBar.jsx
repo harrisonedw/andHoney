@@ -11,7 +11,7 @@ const TopBar = (props) => {
   
   return (
     <TopBarStyled>
-      <h1>& honey</h1>
+      <h1>{'&  h o n e y'}</h1>
     </TopBarStyled>
   )
 }

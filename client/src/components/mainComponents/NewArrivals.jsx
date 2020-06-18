@@ -3,7 +3,7 @@ import React from 'react';
 
 const NewArrivals = (props) => {
   return (
-    <h1>new arrivals</h1>
+    <h1>{'n e w'}</h1>
   )
 }
 
