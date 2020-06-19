@@ -28,7 +28,7 @@ const TopBar = (props) => {
         <h1>{'&  h o n e y'}</h1>
       </TitleContainer>
       <MenuContainer>
-        <MenuButton></MenuButton>
+        <MenuButton pages={props.pages}></MenuButton>
       </MenuContainer>
     </TopBarStyled>
   )

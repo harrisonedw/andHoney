@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as firebase from 'firebase';
 import firebaseConfig from '../../../firebaseconfig.js'
 
@@ -51,6 +51,9 @@ const NewArrivalContainer = styled.div`
 
 const App = () => {
 
+  const [pages, setPages] = useState([ 'home', 'about', 'tops', 'pants', 'accessories' ])
+
+
   // firebase.initializeApp(firebaseConfig);
 
   // let categoriesDb = firebase.database().ref('/categories').once('value');
@@ -60,7 +63,7 @@ const App = () => {
   return (
     <AppContainer>
       <TopBarContainer>
-        <TopBar></TopBar>
+        <TopBar pages={pages}></TopBar>
       </TopBarContainer>
       <CategoryContainer>
         <Categories></Categories>
