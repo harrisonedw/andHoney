@@ -56,7 +56,7 @@ const MenuButton = (props) => {
       
       { show && (
           <MenuModal>
-            
+            <MenuContent></MenuContent>
           </MenuModal>
         )}
 
