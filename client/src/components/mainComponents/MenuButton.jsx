@@ -6,11 +6,13 @@ import MenuContent from './MenuContent.jsx';
 
 
 const MenuStyleContainer = styled.div`
-  color: white;
+  color: black;
 `
 
 const Button = styled.button`
   height: 50px;
+  top: 25px;
+  right: 25px
   :hover {
     cursor: pointer;
   }
@@ -32,6 +34,14 @@ const MenuModal = styled.div`
   opacity: .88;
 `
 
+const MenuText = styled.div`
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+`
 
 
 const MenuButton = (props) => {
@@ -46,17 +56,21 @@ const MenuButton = (props) => {
     setShow(false);
   }
   
+  const titles = props.pages.map((title, i) => {
+    return (
+     <p key={i}>{title}</p>
+    )
+   })
 
 
   return (
     <MenuStyleContainer>
       <Button onClick={openMenu}>{'m e n u'}</Button>
       
-      
-      
       { show && (
           <MenuModal>
-            <MenuContent></MenuContent>
+            <Button onClick={closeMenu}>{'c l o s e'}</Button>
+            <MenuText pages={props.pages}>{titles}</MenuText>
           </MenuModal>
         )}
 

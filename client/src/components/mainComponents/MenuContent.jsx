@@ -13,8 +13,14 @@ const MenuText = styled.div`
 
 const MenuContent = (props) => {
 
+  const titles = props.pages.map((title, i) => {
+   return (
+    <p key={i}>{title}</p>
+   )
+  })
+
   return (
-    <MenuText>{'m e n u'}</MenuText>
+    <MenuText>{titles}</MenuText>
   )
 }
 export default MenuContent;
