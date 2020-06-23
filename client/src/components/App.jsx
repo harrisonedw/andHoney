@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import * as firebase from 'firebase';
-import firebaseConfig from '../../../firebaseconfig.js'
+import React, { useState, useEffect } from 'react';
+import { auth, db } from '../../../firebaseconfig.js'
 
 import styled from 'styled-components';
 import TopBar from './mainComponents/TopBar.jsx';
@@ -53,10 +52,17 @@ const App = () => {
 
   const [pages, setPages] = useState([ 'home', 'about', 'tops', 'pants', 'accessories' ])
 
+  useEffect(() => {
+    console.log('testing')
+    db.collection('categories').onSnapshot(snapshot => {
+      const catState = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      console.log(catState);
+    });
 
-  // firebase.initializeApp(firebaseConfig);
-
-  // let categoriesDb = firebase.database().ref('/categories').once('value');
+  })
 
 
 
