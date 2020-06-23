@@ -70,7 +70,7 @@ const App = () => {
         <TopBar pages={pages}></TopBar>
       </TopBarContainer>
       <CategoryContainer>
-        <Categories></Categories>
+        <Categories categories={categories}></Categories>
       </CategoryContainer>
       <NewArrivalContainer>
         <NewArrivals></NewArrivals>

@@ -39,6 +39,7 @@ const CategoryStyle = styled.div`
 
 const Category = (props) => {
 
+
   return (
     <CategoryStyle>
       <ImgContainer>

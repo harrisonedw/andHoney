@@ -11,8 +11,6 @@ const MenuStyleContainer = styled.div`
 
 const Button = styled.button`
   height: 50px;
-  top: 25px;
-  right: 25px
   :hover {
     cursor: pointer;
   }
