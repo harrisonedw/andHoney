@@ -51,6 +51,7 @@ const NewArrivalContainer = styled.div`
 const App = () => {
 
   const [pages, setPages] = useState([ 'home', 'about', 'tops', 'pants', 'accessories' ])
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     console.log('testing')
@@ -59,12 +60,9 @@ const App = () => {
         id: doc.id,
         ...doc.data()
       }));
-      console.log(catState);
+      setCategories(catState);
     });
-
-  })
-
-
+  }, [])
 
   return (
     <AppContainer>
