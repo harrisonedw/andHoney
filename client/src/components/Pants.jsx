@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 
 const Pants = () => {
-
+  console.log('pants')
 
   return (
     <div>Pants</div>

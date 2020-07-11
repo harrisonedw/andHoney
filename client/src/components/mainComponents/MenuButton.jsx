@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import MenuContent from './MenuContent.jsx';
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+
 // import Modal from 'react-modal';
 
 
@@ -68,7 +70,23 @@ const MenuButton = (props) => {
       { show && (
           <MenuModal>
             <Button onClick={closeMenu}>{'c l o s e'}</Button>
-            <MenuText pages={props.pages}>{titles}</MenuText>
+            <MenuText pages={props.pages}>{
+              //titles
+            }
+              <nav>
+                <ul>
+                  <li>
+                    <Link onClick={closeMenu} to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link onClick={closeMenu} to="/pants">Pants</Link>
+                  </li>
+                  <li>
+                    <Link onClick={closeMenu} to="/tops">Tops</Link>
+                  </li>
+                </ul>
+              </nav>
+            </MenuText>
           </MenuModal>
         )}
 

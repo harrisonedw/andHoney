@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Categories from './mainComponents/Categories.jsx';
 import NewArrivals from './mainComponents/NewArrivals.jsx';
 
+const HomeContainer = styled.div`
+`
 
 const CategoryContainer = styled.div`
   background-color: #f0f0f0;
@@ -26,7 +28,7 @@ const NewArrivalContainer = styled.div`
   text: black;
 `
 
-const Home = () => {
+const Home = (props) => {
 
 
   return (

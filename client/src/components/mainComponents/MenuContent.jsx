@@ -20,7 +20,23 @@ const MenuContent = (props) => {
   })
 
   return (
-    <MenuText>{titles}</MenuText>
+    // <MenuText>{titles}</MenuText>
+    <MenuText>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/pants">Pants</Link>
+              </li>
+              <li>
+                <Link to="/users">Users</Link>
+              </li>
+            </ul>
+          </nav>
+    </MenuText>
+
   )
 }
 export default MenuContent;
