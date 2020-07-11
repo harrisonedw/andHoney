@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { auth, db } from '../../../firebaseconfig.js'
+import { Router, Route, Switch } from "react-router-dom";
 
 import styled from 'styled-components';
 import TopBar from './mainComponents/TopBar.jsx';
 import Categories from './mainComponents/Categories.jsx';
 import NewArrivals from './mainComponents/NewArrivals.jsx';
+import Home from './Home.jsx'
 
 
 
@@ -69,12 +71,38 @@ const App = () => {
       <TopBarContainer>
         <TopBar pages={pages}></TopBar>
       </TopBarContainer>
-      <CategoryContainer>
-        <Categories categories={categories}></Categories>
-      </CategoryContainer>
-      <NewArrivalContainer>
-        <NewArrivals></NewArrivals>
-      </ NewArrivalContainer>
+
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/pants">Pants</Link>
+              </li>
+              <li>
+                <Link to="/users">Users</Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/pants">
+              <Users />
+            </Route>
+            <Route path="/">
+              <Home categories={categories}/>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </AppContainer>
   )
 }
