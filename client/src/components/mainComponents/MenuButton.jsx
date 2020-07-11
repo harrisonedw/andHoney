@@ -68,8 +68,7 @@ const MenuButton = (props) => {
       <Button onClick={openMenu}>{'m e n u'}</Button>
       
       { show && (
-          <MenuModal>
-            <Button onClick={closeMenu}>{'c l o s e'}</Button>
+          <MenuModal onClick={closeMenu} >
             <MenuText pages={props.pages}>{
               //titles
             }
