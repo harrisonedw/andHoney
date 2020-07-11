@@ -29,6 +29,8 @@
     "react-css-modules": "^4.7.11",
     "react-dom": "^16.13.0",
     "react-modal": "^3.11.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-tooltip": "^4.1.2",
     "request": "^2.88.2",
     "style-loader": "^1.2.1",
