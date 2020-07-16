@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Category from './Category.jsx'
 
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+
 const CategoriesContainer = styled.div`
   color: black;
   display: flex;
@@ -14,7 +16,9 @@ const Categories = (props) => {
 
   const cats = props.categories.map((cat, i) => {
     return (
-      <Category key={i} name={cat.name} image={cat.img}></Category>
+      <Link to={`/${cat.name}`}>
+        <Category key={i} name={cat.name} image={cat.img}></Category>
+      </Link>
     )
   })
 

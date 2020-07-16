@@ -7,6 +7,59 @@ import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 
 
+
+
+const MenuButton = (props) => {
+  
+  const [show, setShow] = useState(false);
+  
+  const openMenu = (event) => {
+    setShow(true);
+  }
+  
+  const closeMenu = (event) => {
+    setShow(false);
+  }
+  
+  const titles = props.pages.map((title, i) => {
+    return (
+      <p key={i}>{title}</p>
+      )
+    })
+    
+    
+    return (
+      <MenuStyleContainer>
+      <Button onClick={openMenu}>{'m e n u'}</Button>
+      
+      { show && (
+        <MenuModal onClick={closeMenu} >
+            <MenuText pages={props.pages}>{
+              //titles
+            }
+              <nav>
+                <ul>
+                  <li>
+                    <Link onClick={closeMenu} to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link onClick={closeMenu} to="/pants">Pants</Link>
+                  </li>
+                  <li>
+                    <Link onClick={closeMenu} to="/tops">Tops</Link>
+                  </li>
+                </ul>
+              </nav>
+            </MenuText>
+          </MenuModal>
+        )}
+
+    </MenuStyleContainer>
+  )
+}
+
+export default MenuButton;
+
 const MenuStyleContainer = styled.div`
   color: black;
 `
@@ -42,55 +95,3 @@ const MenuText = styled.div`
   top: 50%;
   left: 50%;
 `
-
-
-const MenuButton = (props) => {
-
-  const [show, setShow] = useState(false);
-
-  const openMenu = (event) => {
-    setShow(true);
-  }
-
-  const closeMenu = (event) => {
-    setShow(false);
-  }
-  
-  const titles = props.pages.map((title, i) => {
-    return (
-     <p key={i}>{title}</p>
-    )
-   })
-
-
-  return (
-    <MenuStyleContainer>
-      <Button onClick={openMenu}>{'m e n u'}</Button>
-      
-      { show && (
-          <MenuModal onClick={closeMenu} >
-            <MenuText pages={props.pages}>{
-              //titles
-            }
-              <nav>
-                <ul>
-                  <li>
-                    <Link onClick={closeMenu} to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link onClick={closeMenu} to="/pants">Pants</Link>
-                  </li>
-                  <li>
-                    <Link onClick={closeMenu} to="/tops">Tops</Link>
-                  </li>
-                </ul>
-              </nav>
-            </MenuText>
-          </MenuModal>
-        )}
-
-    </MenuStyleContainer>
-  )
-}
-
-export default MenuButton;
