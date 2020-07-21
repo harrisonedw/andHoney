@@ -29,7 +29,6 @@ const Categories = (props) => {
         {cats}
       </CategoriesContainer>
     </div>
-
   )
 }
 
